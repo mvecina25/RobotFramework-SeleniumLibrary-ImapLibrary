@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.1 (Python 3.7.1 on win32)" generated="20190724 19:50:01.835" rpa="false">
+<suite id="s1" name="EndToEndTest" source="C:\Automation\workspace\iselect\iselect-amazon\test-suites\EndToEndTest.robot">
+<test id="s1-t1" name="TC1">
+<kw name="Run Keywords" library="BuiltIn" type="setup">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Init Browser</arg>
+</arguments>
+<kw name="Init Browser" library="BrowerSetup">
+<kw name="Run Keyword" library="BuiltIn">
+<doc>Executes the given keyword with the given arguments.</doc>
+<arguments>
+<arg>Open ${browser} Browser</arg>
+<arg>${url}</arg>
+</arguments>
+<kw name="Open Chrome Browser" library="BrowerSetup">
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+</arguments>
+<assign>
+<var>${chrome_options}</var>
+</assign>
+<msg timestamp="20190724 19:50:08.363" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x04C1A790&gt;</msg>
+<status status="PASS" starttime="20190724 19:50:08.363" endtime="20190724 19:50:08.363"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>disable-extensions</arg>
+</arguments>
+<status status="PASS" starttime="20190724 19:50:08.363" endtime="20190724 19:50:08.364"></status>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<arguments>
+<arg>${chrome options}</arg>
+<arg>add_argument</arg>
+<arg>start-maximized</arg>
+</arguments>
+<status status="PASS" starttime="20190724 19:50:08.364" endtime="20190724 19:50:08.364"></status>
+</kw>
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>chrome_extension_disabled</arg>
+<arg>chrome_options=${chrome_options}</arg>
+<arg>executable_path=C:\\Automation\\workspace\\iselect\\iselect-core\\helper\\..\\drivers\\chromedriver.exe</arg>
+</arguments>
+<msg timestamp="20190724 19:50:08.364" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" starttime="20190724 19:50:08.364" endtime="20190724 19:50:11.022"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+</arguments>
+<msg timestamp="20190724 19:50:11.022" level="INFO">Opening url 'https://www.amazon.com/'</msg>
+<status status="PASS" starttime="20190724 19:50:11.022" endtime="20190724 19:50:15.493"></status>
+</kw>
+<status status="PASS" starttime="20190724 19:50:08.363" endtime="20190724 19:50:15.493"></status>
+</kw>
+<status status="PASS" starttime="20190724 19:50:08.362" endtime="20190724 19:50:15.494"></status>
+</kw>
+<status status="PASS" starttime="20190724 19:50:08.362" endtime="20190724 19:50:15.494"></status>
+</kw>
+<status status="PASS" starttime="20190724 19:50:08.362" endtime="20190724 19:50:15.494"></status>
+</kw>
+<kw name="Shop an item">
+<arguments>
+<arg>${item1}</arg>
+</arguments>
+<kw name="Click account to sign in" library="HomePage">
+<kw name="Click" library="SeleniumAction">
+<arguments>
+<arg>${buttonAccountList}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20190724 19:50:15.496" level="INFO">Clicking element '//*[@id="nav-link-accountList"]'.</msg>
+<status status="PASS" starttime="20190724 19:50:15.496" endtime="20190724 19:50:17.799"></status>
+</kw>
+<status status="PASS" starttime="20190724 19:50:15.495" endtime="20190724 19:50:17.799"></status>
+</kw>
+<status status="PASS" starttime="20190724 19:50:15.495" endtime="20190724 19:50:17.799"></status>
+</kw>
+<kw name="Login with default credentials" library="LoginPage">
+<kw name="Set" library="SeleniumAction">
+<arguments>
+<arg>${usernameField}</arg>
+<arg>${username}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20190724 19:50:17.800" endtime="20190724 19:50:17.831"></status>
+</kw>
+<kw name="Clear Using Back Space" library="SeleniumAction">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>value</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20190724 19:50:17.843" level="INFO">${value} = </msg>
+<status status="PASS" starttime="20190724 19:50:17.831" endtime="20190724 19:50:17.843"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${backspace}</var>
+</assign>
+<msg timestamp="20190724 19:50:17.843" level="INFO">Length is 0</msg>
+<msg timestamp="20190724 19:50:17.843" level="INFO">${backspace} = 0</msg>
+<status status="PASS" starttime="20190724 19:50:17.843" endtime="20190724 19:50:17.844"></status>
+</kw>
+<kw name="${ctr} IN RANGE [ ${backspace} ]" type="for">
+<status status="PASS" starttime="20190724 19:50:17.844" endtime="20190724 19:50:17.844"></status>
+</kw>
+<status status="PASS" starttime="20190724 19:50:17.831" endtime="20190724 19:50:17.844"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20190724 19:50:17.844" level="INFO">Typing text 'mvecina.testing@gmail.com' into text field '//input[@id='ap_email']'.</msg>
+<status status="PASS" starttime="20190724 19:50:17.844" endtime="20190724 19:50:18.003"></status>
+</kw>
+<status status="PASS" starttime="20190724 19:50:17.800" endtime="20190724 19:50:18.003"></status>
+</kw>
+<kw name="Set" library="SeleniumAction">
+<arguments>
+<arg>${passwordField}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>5</arg>
+</arguments>
+<status status="PASS" starttime="20190724 19:50:18.003" endtime="20190724 19:50:18.029"></status>
+</kw>
+<kw name="Clear Using Back Space" library="SeleniumAction">
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<doc>Returns value of ``attribute`` from element ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>value</arg>
+</arguments>
+<assign>
+<var>${value}</var>
+</assign>
+<msg timestamp="20190724 19:50:18.042" level="INFO">${value} = </msg>
+<status status="PASS" starttime="20190724 19:50:18.030" endtime="20190724 19:50:18.042"></status>
+</kw>
+<kw name="Get Length" library="BuiltIn">
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<arguments>
+<arg>${value}</arg>
+</arguments>
+<assign>
+<var>${backspace}</var>
+</assign>
+<msg timestamp="20190724 19:50:18.043" level="INFO">Length is 0</msg>
+<msg timestamp="20190724 19:50:18.043" level="INFO">${backspace} = 0</msg>
+<status status="PASS" starttime="20190724 19:50:18.043" endtime="20190724 19:50:18.043"></status>
+</kw>
+<kw name="${ctr} IN RANGE [ ${backspace} ]" type="for">
+<status status="PASS" starttime="20190724 19:50:18.043" endtime="20190724 19:50:18.043"></status>
+</kw>
+<status status="PASS" starttime="20190724 19:50:18.029" endtime="20190724 19:50:18.043"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+</arguments>
+<msg timestamp="20190724 19:50:18.044" level="INFO">Typing text 'testing!@#' into text field '//input[@id='ap_password']'.</msg>
+<status status="PASS" starttime="20190724 19:50:18.043" endtime="20190724 19:50:18.132"></status>
+</kw>
+<status status="PASS" starttime="20190724 19:50:18.003" endtime="20190724 19:50:18.133"></status>
+</kw>
+<kw name="Click" library="SeleniumAction">
+<arguments>
+<arg>${loginBtn}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${locator}</arg>
+</arguments>
+<msg timestamp="20190724 19:50:18.134" level="INFO">Clicking element '//*[@id="signInSubmit"]'.</msg>
+<status status="PASS" starttime="20190724 19:50:18.133" endtime="20190724 19:50:19.795"></status>
+</kw>
+<status status="PASS" starttime="20190724 19:50:18.133" endtime="20190724 19:50:19.796"></status>
+</kw>
+<status status="PASS" starttime="20190724 19:50:17.799" endtime="20190724 19:50:19.796"></status>
+</kw>
+<status status="PASS" starttime="20190724 19:50:15.494" endtime="20190724 19:50:19.796"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190724 19:50:19.798" endtime="20190724 19:50:22.076"></status>
+</kw>
+<status status="PASS" starttime="20190724 19:50:08.361" endtime="20190724 19:50:22.077" critical="yes"></status>
+</test>
+<kw name="Run Keywords" library="BuiltIn" type="teardown">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Stop Remote Server</arg>
+<arg>Delete Sikuli Logs and Captured Images</arg>
+</arguments>
+<kw name="Stop Remote Server" library="SikuliLibrary">
+<doc>Stops the remote server.</doc>
+<msg timestamp="20190724 19:50:22.093" level="INFO">Robot Framework remote server stopping</msg>
+<status status="PASS" starttime="20190724 19:50:22.080" endtime="20190724 19:50:22.094"></status>
+</kw>
+<kw name="Delete Sikuli Logs and Captured Images" library="BrowerSetup">
+<kw name="Run" library="OperatingSystem">
+<doc>Runs the given command in the system and returns the output.</doc>
+<arguments>
+<arg>C:\\Automation\\workspace\\iselect\\iselect-core\\helper/../scripts/deleteSikuliLogsAndImages.bat</arg>
+</arguments>
+<msg timestamp="20190724 19:50:22.102" level="INFO">Running command 'C:\Automation\workspace\iselect\iselect-core\helper/../scripts/deleteSikuliLogsAndImages.bat 2&gt;&amp;1'.</msg>
+<status status="PASS" starttime="20190724 19:50:22.095" endtime="20190724 19:50:22.149"></status>
+</kw>
+<status status="PASS" starttime="20190724 19:50:22.094" endtime="20190724 19:50:22.149"></status>
+</kw>
+<status status="PASS" starttime="20190724 19:50:22.079" endtime="20190724 19:50:22.149"></status>
+</kw>
+<doc>Suite description</doc>
+<status status="PASS" starttime="20190724 19:50:01.837" endtime="20190724 19:50:22.150"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="EndToEndTest">EndToEndTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
