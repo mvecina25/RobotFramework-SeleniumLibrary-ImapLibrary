@@ -1,3 +1,5 @@
+### To get the overview of the project, please see Overview.docx ###
+
 ### Pre-requisite ### 
 Install Chrome
 Install JDK (java version 11.0.2)
