@@ -32,3 +32,4 @@
       2. Go to the location of the project
       3. Type "robot iselect-amazon\test-suites\EndToEndTest.robot"
       
+> Project for iSelect
