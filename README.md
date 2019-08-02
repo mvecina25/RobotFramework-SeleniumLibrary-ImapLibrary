@@ -1,4 +1,4 @@
-# Robot Framework whttps://github.com/mvecina25/amazon_with_robot_frameworkith Selenium Library
+# Robot Framework with Selenium Library
 ### [Overview of the project](https://github.com/mvecina25/amazon_with_robot_framework/blob/master/Overview.docx)
 
 #### Automate the following:
