@@ -28,8 +28,8 @@
       PATH C:\Users{username}\AppData\Local\Programs\Python\Python37-32
       ```
 #### How to run
-```sh
-1. Run CMD
-2. Go to the location of the project
-3. Type "robot iselect-amazon\test-suites\EndToEndTest.robot"
-```
+      ```sh
+      1. Run CMD
+      2. Go to the location of the project
+      3. Type "robot iselect-amazon\test-suites\EndToEndTest.robot"
+      ```
