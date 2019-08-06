@@ -1,4 +1,4 @@
-# Robot Framework with Selenium Library and Imap Library
+# Robot Framework with Selenium Library, Imap Library, and Page Object Model
 ### [Overview of the project](https://github.com/mvecina25/amazon_with_robot_framework/blob/master/Overview.docx)
 
 #### Automate the following:
