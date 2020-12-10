@@ -15,12 +15,14 @@ Resource  ../../../iselect-amazon/resources/page-objects/AuthenticationPage.robo
 *** Variables ***
 ${usernameField}                    //input[@id='ap_email']
 ${passwordField}                    //input[@id='ap_password']
+${continueBtn}                      //input[contains(@id,'continue')]
 ${loginBtn}                         //*[@id="signInSubmit"]
 
 
 *** Keywords ***
 Login with default credentials
     Set  ${usernameField}   ${username}
+    Click   ${continueBtn}
     Set  ${passwordField}   ${password}
     Click  ${loginBtn}
 
