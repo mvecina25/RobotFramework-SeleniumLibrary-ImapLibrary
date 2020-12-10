@@ -32,13 +32,13 @@ Shop an item
     [Arguments]  ${item}
     Click account to sign in
     Login with default credentials
-    Enter otp code via api
-    Verify home page
-    Go to shopping cart page
-    Input text to search box ${item}
-    Click the search button
-    Click the searched item ${item1Image}
-    Click the add to cart button
-    Click the sidesheet card button
-    Click the proceed to checkout button
-    Verify check out page
+#    Enter otp code via api
+#    Verify home page
+#    Go to shopping cart page
+#    Input text to search box ${item}
+#    Click the search button
+#    Click the searched item ${item1Image}
+#    Click the add to cart button
+#    Click the sidesheet card button
+#    Click the proceed to checkout button
+#    Verify check out page
